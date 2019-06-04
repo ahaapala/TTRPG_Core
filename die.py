@@ -39,6 +39,12 @@ class die:
         else:
             raise Exception('Die has no results yet.  Unable to compare __gt__')
 
+    def get_sides(self):
+        return self.sides
+
+    def get_type(self):
+        return self.die_type
+
     def roll(self):
         """
             Roll the die and store the results
@@ -114,7 +120,7 @@ class planer_die(die):
 class dice_pool():
     """
         - Do I want to add reroll functionality or something to help 
-        deal with bonus/penalty dice?
+        deal with bonus/penalty dicei (present in both CoC and D&D 5th)?
     """
 
     verbose = False
@@ -134,7 +140,9 @@ class dice_pool():
         self.results = []
 
     def __get_dice_pool(self,d_note):
-
+        """
+            This is a "private" method to instantiate the dice from dice notation
+        """
         self.dice = []
 
         if isinstance(d_note,list):
@@ -266,6 +274,21 @@ class dice_pool():
         """
         obj = self.dice[index]
         self.dice.remove(obj)
+
+    def get_sides(self):
+        """
+            Returns the side(s) of the dice in the pool.  Returns an int if a single type of die.  
+            Returns an array if there are multiple types.
+        """
+        sides = []
+        for d in self.dice:
+            side = d.get_sides()
+            if side not in sides:
+                sides.append(side)
+        if len(sides) == 1:
+            return sides[0]
+        else:
+            return sides
 
     def get_results(self):
         """

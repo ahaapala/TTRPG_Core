@@ -16,7 +16,9 @@ class system:
         self.name = name
         self.types_of_roles = types_of_roles   # Types of rolls in the system
         self.types_of_dice  = types_of_dice    # Types of dice the system uses
-        self.dice = dice_pool(types_of_dice)                # Dice pool
+        self.dice = dice_pool(types_of_dice)   # Dice pool
+
+        
 
 class cee_lo(system):
     """

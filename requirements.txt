@@ -2,3 +2,5 @@ pytest
 pytest-mock
 requests
 requests_cache
+numpy
+matplotlib
