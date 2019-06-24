@@ -1,5 +1,5 @@
 from pytest import fixture
-from Dice_Statistics.rpg_system import system, cee_lo, GURPS, CoC, CoC_7th, DnD, DnD_5th, Fate
+from ttrpg_core.rpg_system import system, cee_lo, GURPS, CoC, CoC_7th, DnD, DnD_5th, Fate
 
 class TestRPGSystem(object):
     d_verbose = True

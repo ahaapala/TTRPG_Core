@@ -1,5 +1,5 @@
 import pytest
-from Dice_Statistics.utilities import parse_d_notation
+from ttrpg_core.utilities import parse_d_notation
 
 class TestUtilities(object):
     """

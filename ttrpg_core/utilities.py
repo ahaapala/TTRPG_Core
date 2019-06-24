@@ -6,11 +6,6 @@ def parse_d_notation(d_string):
 
         e.g. 3d6 == 3 six-sided dice 
         4f  == 4 fudge/fate dice
-
-        TODO: 
-            - Thinking of putting the split results into a dictionary or list
-	    - Make the pattern matching/split more robust.  Currently case-sensitive
-
     """
 
     if 'd' in d_string:

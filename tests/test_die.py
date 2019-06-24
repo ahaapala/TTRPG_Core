@@ -1,4 +1,4 @@
-from Dice_Statistics.die import die, fudge_die, planer_die, dice_pool
+from ttrpg_core.die import die, fudge_die, planer_die, dice_pool
 from pytest import fixture
 
 class TestDie(object):

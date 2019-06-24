@@ -1,4 +1,4 @@
-from die import die, fudge_die, dice_pool
+from ttrpg_core.die import die, fudge_die, dice_pool
 """
     3-tier hierarchy of game objects.
     Individual systems/rolls are implemented here.

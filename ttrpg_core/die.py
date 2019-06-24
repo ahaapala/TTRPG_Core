@@ -1,5 +1,5 @@
 from random import randint
-from utilities import parse_d_notation
+from ttrpg_core.utilities import parse_d_notation
 from datetime import datetime
 
 """

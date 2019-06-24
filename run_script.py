@@ -1,6 +1,6 @@
 #! /usr/bin/env python
-from rpg_system import CoC_7th
-from die import dice_pool
+from ttrpg_core.rpg_system import CoC_7th
+from ttrpg_core.die import dice_pool
 
 import sys
 import traceback
@@ -66,7 +66,6 @@ def main(args):
             dp_sides = dp.get_sides()
             if isinstance(dp_sides, list):
                 print('Multiple dice sizes in pool')
-                # TODO: This needs more work as I need a way to group and handle mixed-dice pools    
             else:
                 narray = np.array(dp.get_results())
                 fig, ax = plt.subplots()
