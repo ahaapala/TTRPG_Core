@@ -6,6 +6,6 @@ setup(
    description='A module for exploring ttrpg systems',
    author='Adam Haapala',
    author_email='adamhaapala@yahoo.com',
-   packages=['ttrpg_core'],
-   install_requires=['numpy', 'matplotlib'],
+   packages=['ttrpg_core'],  # Same as name
+   install_requires=['numpy', 'matplotlib'],  # External dependencies
 )
