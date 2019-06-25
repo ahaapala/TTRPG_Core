@@ -1,28 +1,22 @@
 import pytest
 from ttrpg_core.utilities import parse_d_notation
 
-class TestUtilities(object):
-    """
-        Cases To-Write:
-        - iterations of malformed dice formats
-        - expand supported formats
-        - 
-    """
 
+class TestUtilities(object):
 
     def test_basic_parse_d_notation(self):
         d_string = '3d6'
         parse_result = parse_d_notation(d_string)
-        assert parse_result == {'Number_of_Dice':3,
-                                'Number_of_Sides':6,
-                                'Die_Type':'polyhedral'}
+        assert parse_result == {'Number_of_Dice': 3,
+                                'Number_of_Sides': 6,
+                                'Die_Type': 'polyhedral'}
 
     def test_fudge_parse_d_notation(self):
         d_string = '8f'  # Note only 4 are normally used but the parsing code isn't concerned with that
         parse_result = parse_d_notation(d_string)
-        assert parse_result == {'Number_of_Dice':8,
+        assert parse_result == {'Number_of_Dice': 8,
                                 'Number_of_Sides': 6,
-                                'Die_Type':'fudge'}
+                                'Die_Type': 'fudge'}
 
     def test_check_exception(self):
         d_string = 'test'
